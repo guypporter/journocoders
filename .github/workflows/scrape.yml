@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch latest data from the API endpoint
       run: |-
-        curl -s "https://www.change.org/api-proxy/-/discover_feed?is_homepage=true&initial_request=true" | jq '.data.context.articles' > headlines.json
+        curl -s "https://www.change.org/api-proxy/-/discover_feed?is_homepage=true&initial_request=true" | jq '.data.context.articles' > headlines2.json
     - name: Commit and push if the data has changed
       run: |-
         git config user.name "Automated"
